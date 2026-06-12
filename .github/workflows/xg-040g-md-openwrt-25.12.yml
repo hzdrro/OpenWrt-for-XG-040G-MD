@@ -124,12 +124,6 @@ jobs:
         run: |
           ./scripts/feeds update -a
           ./scripts/feeds install -a -f
-
-      - name: Install third-party packages (homeproxy, passwall)
-        working-directory: ./openwrt/package
-        run: |
-          chmod +x $GITHUB_WORKSPACE/scripts/update-packages.sh
-          bash $GITHUB_WORKSPACE/scripts/update-packages.sh
           
       - name: Hotfix rust llvm CI option
         working-directory: ./openwrt
