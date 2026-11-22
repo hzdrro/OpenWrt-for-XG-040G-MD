@@ -23,8 +23,8 @@ on:
 
 env:
   CONFIG_FILE: "config/xg-040g-md.config"
-  REPO_URL: https://github.com/xiangtailiang/openwrt.git
-  REPO_BRANCH: main
+  REPO_URL: https://github.com/VIKINGYFY/immortalwrt.git
+  REPO_BRANCH: owrt
   FEEDS_CONF: feeds.conf.default
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
@@ -205,11 +205,10 @@ jobs:
         run: |
           echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
           cat <<EOF > release.txt
-          🚀 OpenWrt firmware for XG-040G-MD (openwrt-main)
+          🚀 OpenWrt firmware for XG-040G-MD
           ----------------------
           设备型号: XG-040G-MD
           构建时间: $(date +"%Y-%m-%d %H:%M")
-          内核版本: 6.12.X
           源码仓库: $REPO_URL
           分支: $REPO_BRANCH
           EOF
